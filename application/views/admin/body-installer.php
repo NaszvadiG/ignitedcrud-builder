@@ -9,7 +9,7 @@
 
       <div class="head" id="tidy">
         <div class="logo visible-lg visible-md">
-          <img src="<?php echo base_url("img/mb.svg"); ?>" class="img-responsive my-center" style="position:relative; margin-top:10px;" width="250px">
+          <!-- <img src="<?php echo base_url("img/ig2.png"); ?>" class="img-responsive my-center" style="position:relative; margin-top:10px;" > -->
         </div>
 
        

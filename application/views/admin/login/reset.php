@@ -30,7 +30,7 @@
 
                     
                     <?php $atts= array( 'data-validate'=>'parsley'); echo form_open_multipart("admin/login/update_password/$key",$atts); ?>
-                    <img src="<?php echo base_url("img/ig.png"); ?>" class="img-responsive my-center" style="position:relative;">
+                    <img src="<?php echo base_url("img/ig2.png"); ?>" class="img-responsive my-center" style="position:relative;">
                     <p class="h2">Reset Password</p>
                     
                         <div class="form-group">

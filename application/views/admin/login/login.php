@@ -20,7 +20,7 @@
 
                     
                     <?php $atts= array( 'data-validate'=>'parsley'); echo form_open_multipart('admin/login/validate_login',$atts); ?>
-                    <img src="<?php echo base_url("img/mb.svg"); ?>" class="img-responsive my-center" style="position:relative;" width="450px;">
+                    <img src="<?php echo base_url("img/ig2.png"); ?>" class="img-responsive my-center" style="position:relative;" >
                     
                     
                         <div class="form-group">

@@ -15,6 +15,7 @@
 
                	<?php foreach ($fields as $key) : ?>
 
+                <?php if($key->name != "id"): ?>
                	   <div class="sup-contacts m-t" >
 
                		<?php echo $key->name; ?>
@@ -42,7 +43,7 @@
 
                		<br/>
                		</div>
-
+                <?php endif; ?>
 
                <?php endforeach; ?>
                		

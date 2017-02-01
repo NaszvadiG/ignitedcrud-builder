@@ -140,6 +140,8 @@ class Crud_generator extends CI_Controller {
 		$this->crud_model->generate_model($table);
 		$this->crud_model->generate_controller($table,$form_array);
 		$this->crud_model->generate_view($table,$form_array);
+
+		redirect("admin/$table","refresh");
 	}
 
 }

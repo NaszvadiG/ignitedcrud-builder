@@ -4,11 +4,11 @@
 
 
             <div class="col-sm-12" style="margin-top:30px; margin-bottom:20px;">
-                <!--   <div class="line"></div>
+                  <div class="line"></div>
                 <div class="footer-brand">
 
                     <div class="col-sm-2">
-                        <strong>MBL ordering</strong> <br/>
+                        <strong>Crud Builder</strong> <br/>
                         Help <br/>
                         Mobile Application <br/>
                         Pricing <br/>
@@ -37,7 +37,7 @@
                         Twitter <br/>
                         Facebook <br/>
                         Developers <br/>
-                    </div> -->
+                    </div>
 
 
 

@@ -225,7 +225,7 @@ class Crud_model extends CI_Model {
 	 				//do the required
 	 				if($form_array[$i]['required'] == '1')
 	 				{
-	 					$string = str_replace("{{required}}", "<div class='errors inline'>*This field is required</div> " , $string);
+	 					$string = str_replace("{{required}}", "<div class='errors inline'>*</div> " , $string);
 	 				}
 	 				else{
 	 					$string = str_replace("{{required}}", " " , $string);
@@ -244,7 +244,7 @@ class Crud_model extends CI_Model {
 	 				//do the required
 	 				if($form_array[$i]['required'] == '1')
 	 				{
-	 					$string = str_replace("{{required}}", "<div class='errors inline'>*This field is required</div>" , $string);
+	 					$string = str_replace("{{required}}", "<div class='errors inline'>*</div>" , $string);
 	 				}
 	 				else{
 	 					$string = str_replace("{{required}}", " " , $string);
@@ -262,7 +262,7 @@ class Crud_model extends CI_Model {
 	 				//do the required
 	 				if($form_array[$i]['required'] == '1')
 	 				{
-	 					$string = str_replace("{{required}}", "<div class='errors inline'>*This field is required</div>" , $string);
+	 					$string = str_replace("{{required}}", "<div class='errors inline'>*</div>" , $string);
 	 				}
 	 				else{
 	 					$string = str_replace("{{required}}", " " , $string);
@@ -307,7 +307,7 @@ class Crud_model extends CI_Model {
 	 				//do the required
 	 				if($form_array[$i]['required'] == '1')
 	 				{
-	 					$string = str_replace("{{required}}", "<div class='errors inline'>*This field is required</div> " , $string);
+	 					$string = str_replace("{{required}}", "<div class='errors inline'>*</div> " , $string);
 	 				}
 	 				else{
 	 					$string = str_replace("{{required}}", " " , $string);
@@ -326,7 +326,7 @@ class Crud_model extends CI_Model {
 	 				//do the required
 	 				if($form_array[$i]['required'] == '1')
 	 				{
-	 					$string = str_replace("{{required}}", "<div class='errors inline'>*This field is required</div>" , $string);
+	 					$string = str_replace("{{required}}", "<div class='errors inline'>*</div>" , $string);
 	 				}
 	 				else{
 	 					$string = str_replace("{{required}}", " " , $string);
@@ -344,7 +344,7 @@ class Crud_model extends CI_Model {
 	 				//do the required
 	 				if($form_array[$i]['required'] == '1')
 	 				{
-	 					$string = str_replace("{{required}}", "<div class='errors inline'>*This field is required</div>" , $string);
+	 					$string = str_replace("{{required}}", "<div class='errors inline'>*</div>" , $string);
 	 				}
 	 				else{
 	 					$string = str_replace("{{required}}", " " , $string);

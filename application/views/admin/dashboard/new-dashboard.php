@@ -6,7 +6,7 @@
 		        
 		        <div class="panel-body">
 		        	 <!-- <img class="img-responsive my-center" src="<?php echo base_url('img/upload_files.png'); ?>" alt="image" /> -->
-		        	 <?php echo anchor('crud/crud_generator', 'Crud Generator', 'attributs'); ?>
+		        	 <?php echo anchor('admin/crud_generator', 'Crud Generator', 'attributs'); ?>
 
 		        </div>
 		    </section>

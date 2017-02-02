@@ -8,14 +8,60 @@ class Crud_generator extends CI_Controller {
 		//browse da tables
 
 		$tables = $this->db->list_tables();
-
-		$data['tables'] = $tables;
+		$table = $this->ignore_main($tables);
+		$data['tables'] = $table;
 
 		$this->load->view('admin/header');
         $this->load->view('admin/body');
-        $this->load->view('crud/crud-gen',$data);
+        $this->load->view('admin/crud/crud-gen',$data);
         $this->load->view('admin/footer');
 		
+	}
+
+
+
+	//ignore the main standard tables
+	public function ignore_main($tables)
+	{
+		$tmp = array();
+
+		foreach ($tables as $field) 
+		{	
+			if($field == "IGS_email")
+			{
+				//do nothing
+			}
+			else if($field == "IGS_permission_groups")
+			{
+				//do nothing
+			}
+			else if($field == "IGS_permission_map")
+			{
+				//do nothing 
+			}
+			else if($field == "IGS_permissions")
+			{
+				//do nothing				
+			}
+			else if($field == "IGS_routes")
+			{
+				//do nothing				
+			}
+			else if($field == "IGS_site")
+			{
+				//do nothing				
+			}
+			else if($field == "IGS_user")
+			{
+				//do nothing				
+			}
+			else
+			{
+				array_push($tmp, $field);
+			}
+		}
+		return $tmp;
+
 	}
 
 
@@ -27,6 +73,9 @@ class Crud_generator extends CI_Controller {
 		//generate the code
 
 		//IMPORTANT must assume the table name only has one underscore
+		//Reconsider coding too many bugs
+
+
 		$arr = explode("_", $table);
 
 		
@@ -97,7 +146,7 @@ class Crud_generator extends CI_Controller {
 
 		$this->load->view('admin/header');
         $this->load->view('admin/body');
-        $this->load->view('crud/crud-opt',$data);
+        $this->load->view('admin/crud/crud-opt',$data);
         $this->load->view('admin/footer');
 
 	}
@@ -140,6 +189,10 @@ class Crud_generator extends CI_Controller {
 		$this->crud_model->generate_model($table);
 		$this->crud_model->generate_controller($table,$form_array);
 		$this->crud_model->generate_view($table,$form_array);
+
+
+		$this->session->set_flashdata('type', '1');
+		$this->session->set_flashdata('msg', 'Your controller, models and views have been created!');
 
 		redirect("admin/$table","refresh");
 	}

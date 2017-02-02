@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="mainvcontainer" style="background-image:url('<?php echo base_url('img/bg.jpg'); ?>'); backround-repeat: no-repeat; 
+    <div class="" style="background-image:url('<?php echo base_url('img/bg.jpg'); ?>'); backround-repeat: no-repeat; 
         background-size:100%; min-height:900px;">
         <div class="col-sm-3"></div>
         <div class="animated bounceInDown col-sm-6">
@@ -11,7 +11,7 @@
                 <div class="panel-body">
                     
 
-                    <img src="<?php echo base_url("img/ig.png"); ?>" class=" img-responsive my-center" style="position:relative;">
+                    
                     
                     <h1 class="text-center"> 404 error</h1>
                     Page not found!

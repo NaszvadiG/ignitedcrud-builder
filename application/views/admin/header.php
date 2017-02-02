@@ -49,9 +49,9 @@
     <link rel="stylesheet" href="<?php echo (base_url()."resources")?>/jquery.growl/stylesheets/jquery.growl.css" media="screen">
     
 
-     <!-- responsive lightbox -->
-   <link rel="stylesheet" type="text/css" href="<?php echo (base_url())?>Responsive-Lightbox/jquery.lightbox.css">
-    <link rel="stylesheet" href="<?php echo (base_url())?>Responsive-Lightbox/demo/demo.css">
+     <!-- responsive lightbox 
+    <link rel="stylesheet" type="text/css" href="<?php echo (base_url())?>Responsive-Lightbox/jquery.lightbox.css">
+    <link rel="stylesheet" href="<?php echo (base_url())?>Responsive-Lightbox/demo/demo.css">-->
 
     <!--[if lt IE 9]>
     <script src="<?php echo (base_url()."resources")?>/js/ie/respond.min.js" cache="false"></script>

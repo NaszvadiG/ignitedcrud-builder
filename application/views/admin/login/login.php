@@ -25,10 +25,12 @@
                     
                         <div class="form-group">
                             <label>Username</label>
+                            <div class="igs-small">Default is admin</div>
                             <input name="name" type="text"  class="form-control" placeholder="Type here" data-toggle="tooltip" data-placement="top"  value="">
                         </div>
                         <div class="form-group">
                             <label>Password</label>
+                            <div class="igs-small">Default is letmein1</div>
                             <input name="password" type="password"  class="form-control" placeholder="Type here" data-toggle="tooltip" data-placement="top"  value="">
                         </div>
                    

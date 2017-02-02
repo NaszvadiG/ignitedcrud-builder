@@ -35,8 +35,9 @@
   <script src="<?php echo(base_url()."resources") ?>/js/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
 
 
-  <!-- lightbox -->
+  <!-- lightbox 
   <script src="<?php echo(base_url()) ?>Responsive-Lightbox/jquery.lightbox.js"></script>
+  -->
 
 
   <!-- growl -->
@@ -74,11 +75,12 @@
    $('#example').DataTable();
 
 
-       /*do the gallery*/
+    /*do the gallery
     $(function() 
     {
       $('.gallery a').lightbox(); 
     });
+    */
 
 
 

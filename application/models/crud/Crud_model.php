@@ -214,7 +214,7 @@ class Crud_model extends CI_Model {
 	 	{ 
 	 		if($form_array[$i]['name'] == $fieldname)
 	 		{
-	 			if($form_array[$i]['type'] == 'pmtext')
+	 			if($form_array[$i]['type'] == 'pmtext' || $form_array[$i]['type'] == 'pmnumber')
 	 			{
 	 				$string = read_file(APPPATH .'/crud_master/pmtext.php');
 	 				$string = str_replace("{{val}}", $fieldname, $string);
@@ -233,7 +233,7 @@ class Crud_model extends CI_Model {
 
 	 			}
 
-	 			if($form_array[$i]['type'] == 'pmtextbox')
+	 			if($form_array[$i]['type'] == 'pmtextbox' )
 	 			{
 	 				$string = read_file(APPPATH .'/crud_master/pmtextbox.php');
 	 				$string = str_replace("{{val}}", $fieldname, $string);
@@ -296,7 +296,7 @@ class Crud_model extends CI_Model {
 	 	{ 
 	 		if($form_array[$i]['name'] == $fieldname)
 	 		{
-	 			if($form_array[$i]['type'] == 'pmtext')
+	 			if($form_array[$i]['type'] == 'pmtext' || $form_array[$i]['type'] == 'pmnumber')
 	 			{
 	 				$string = read_file(APPPATH .'/crud_master/pmtext_edit.php');
 	 				$string = str_replace("{{val}}", $fieldname, $string);
@@ -444,6 +444,11 @@ class Crud_model extends CI_Model {
    		//do a string replace on table
    		$string = str_replace("{{table}}", $table, $string);
 
+
+   		//make sure the controller name is uppercase
+   		$t_upper = ucfirst($table);
+   		$string = str_replace("{{table_upper}}", $t_upper, $string);
+
    		//do a string replace on the args
    		$gen_args = $this->gen_args($table);
    		$string = str_replace("{{args}}", $gen_args, $string);
@@ -555,6 +560,22 @@ class Crud_model extends CI_Model {
 	 				}
 	 			}
 
+	 			if($form_array[$i]['type'] == 'pmnumber')
+	 			{
+	 				
+
+	 				//do the required
+	 				if($form_array[$i]['required'] == '1')
+	 				{
+	 					$tmp = "\$this->form_validation->set_rules('$fieldname', '$fieldname', 'required|integer');";
+	 					$string = $string . $tmp;
+	 				}
+	 				else{
+	 					$tmp = "\$this->form_validation->set_rules('$fieldname', '$fieldname', 'integer');";
+	 					$string = $string . $tmp;
+	 				}
+	 			}
+
 	 			if($form_array[$i]['type'] == 'pmdate')
 	 			{
 	 				
@@ -601,6 +622,9 @@ class Crud_model extends CI_Model {
    		//do a string replace on table
    		$string = str_replace("{{table}}", $table, $string);
 
+   		//make sure the controller name is uppercase
+   		$t_upper = ucfirst($table);
+   		$string = str_replace("{{table_upper}}", $t_upper, $string);
 
 
    		//do a string replace on the args

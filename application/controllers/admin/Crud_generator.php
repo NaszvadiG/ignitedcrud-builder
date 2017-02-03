@@ -55,6 +55,10 @@ class Crud_generator extends CI_Controller {
 			{
 				//do nothing				
 			}
+			else if($field == "IGS_uploads")
+			{
+				//do nothing				
+			}
 			else
 			{
 				array_push($tmp, $field);

@@ -9,7 +9,7 @@ class Upload_test extends CI_Controller {
 	{
 
 		$this->db->select('*');
-		$this->db->from('persons');
+		$this->db->from('uploads');
 
 		$query = $this->db->get();
 		
@@ -32,14 +32,14 @@ class Upload_test extends CI_Controller {
 		
 		$fields = array(
         	'filename' => array('type' => 'VARCHAR', 'constraint' => 255),
-        	'full_path' => array('type' => 'VARCHAR', 'constraint' => 1055),
+        	// 'full_path' => array('type' => 'VARCHAR', 'constraint' => 1055),
         	'type' => array('type' => 'VARCHAR', 'constraint' => 255),
         	'size' => array('type' => 'VARCHAR', 'constraint' => 255),
         	'last_ammended' => array('type' => 'datetime'),
         	'userid' => array('type' => 'INT', 'constraint' => 11)
 		);
 
-		$this->dbforge->add_column('persons', $fields);
+		$this->dbforge->add_column('uploads', $fields);
 		// Executes: ALTER TABLE table_name ADD preferences TEXT
 
 	}
@@ -67,12 +67,39 @@ class Upload_test extends CI_Controller {
 	public function delete_file($id)
 	{
 
-		$this->db->where('id', $id);
-		$this->db->delete('persons');
-
 		//unlink(filename)
+		//first get the file path
+
+		$this->db->select('*');
+		$this->db->from('uploads');
+		$this->db->where('id', $id);
+		$this->db->limit(1);
+
+		$query = $this->db->get();
+		
+		$path = "";
+		foreach ($query->result() as $row) 
+		{
+			$path =  $row->filename;
+		}
+		
+
+		$path2 = "./assets/uploads/" . $path; 
+		unlink($path2);
 
 
+
+
+		$this->db->where('id', $id);
+		$this->db->delete('uploads');
+
+		
+
+
+		$this->session->set_flashdata('type', '1');
+		$this->session->set_flashdata('msg', 'File deleted');
+
+		redirect("admin/upload_test","refresh");
 
 	}
 
@@ -84,7 +111,7 @@ class Upload_test extends CI_Controller {
 	  */
 	public function do_upload()
 	{
-		$config['upload_path'] = './img/uploads/';
+		$config['upload_path'] = './assets/uploads/';
 
             
         $config['allowed_types'] = 'gif|jpg|png';
@@ -102,7 +129,7 @@ class Upload_test extends CI_Controller {
 
         	$errors =  $this->upload->display_errors();
 			$this->session->set_flashdata('type', '0');
-			$this->session->set_flashdata('msg', "<strong>Failed</strong> $errors");
+			$this->session->set_flashdata('msg', " $errors");
 			
 			redirect('admin/upload_test','refresh');
 
@@ -115,7 +142,7 @@ class Upload_test extends CI_Controller {
 
             //create a thumbnail
             $config['image_library'] = 'gd2';
-			$config['source_image']	= "./img/uploads/$filename";
+			$config['source_image']	= "./assets/uploads/$filename";
 			$config['create_thumb'] = TRUE;
 			$config['maintain_ratio'] = TRUE;
 			$config['width']	= 200;
@@ -142,7 +169,7 @@ class Upload_test extends CI_Controller {
 			}
 
 
-			//insert this bad boy into the database
+			//insert this  into the database
 			$thumb = $mytry['raw_name'] . '_thumb' . $mytry['file_ext'];
 			$fullsize = $mytry['raw_name'] .  $mytry['file_ext'];
 			$type = $mytry['file_ext'];
@@ -155,10 +182,10 @@ class Upload_test extends CI_Controller {
 				'filename' => $fullsize,
 				'type' =>$type,
 				'size' => $size,
-				'last_ammended' => $last_ammended,
-				'full_path' =>$full_path
+				'last_ammended' => $last_ammended
+				
 				);
-			$this->db->insert('persons', $object);
+			$this->db->insert('uploads', $object);
 
 
 			$this->session->set_flashdata('type', '1');

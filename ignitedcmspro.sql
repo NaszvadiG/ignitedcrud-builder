@@ -32,8 +32,9 @@ CREATE TABLE `routes` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
+DROP TABLE IF EXISTS `uploads`;
 
-CREATE TABLE `IGS_uploads` (
+CREATE TABLE `uploads` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
   `filename` varchar(255) DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL,

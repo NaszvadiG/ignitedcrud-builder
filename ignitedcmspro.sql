@@ -40,7 +40,8 @@ CREATE TABLE `uploads` (
   `type` varchar(255) DEFAULT NULL,
   `size` varchar(255) DEFAULT NULL,
   `last_ammended` datetime DEFAULT NULL,
-  `userid` int(11) DEFAULT NULL
+  `userid` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 

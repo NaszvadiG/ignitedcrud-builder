@@ -33,6 +33,16 @@ CREATE TABLE `routes` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
+CREATE TABLE `IGS_uploads` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+  `filename` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `size` varchar(255) DEFAULT NULL,
+  `last_ammended` datetime DEFAULT NULL,
+  `userid` int(11) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+
 
 #
 # TABLE STRUCTURE FOR: cat_links

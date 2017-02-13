@@ -22,7 +22,7 @@
                     <form action="<?php echo site_url('admin/crud_generator/get_fields'); ?>" method="post" enctype="multipart/form-data">
                         <div class="sup-box"><strong>Instructions</strong>  <br>
                             1. Open the database 'crud' through PHP My Admin <br/>
-                            2. Create a new table prefixed with 'IGS_'  <br/>
+                            2. Create a new table prefixed with '<?php echo $prefix; ?>'  <br/>
                             3. Make sure you create one column called 'id' and make sure it is set to auto increment <br/>
                             4. Then just create any other columns you wish. <br/>
                             5. Once you're done choose the column types and conditional logic.

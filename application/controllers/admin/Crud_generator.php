@@ -5,10 +5,14 @@ class Crud_generator extends CI_Controller {
 	public function index()
 	{
 
-		//browse da tables
+		
 
+		$this->load->database();
+		$data['prefix'] =  $this->db->dbprefix;
+
+		//browse da tables
 		$tables = $this->db->list_tables();
-		$table = $this->ignore_main($tables);
+		$table = $this->ignore_main($tables,$this->db->dbprefix);
 		$data['tables'] = $table;
 
 		$this->load->view('admin/header');
@@ -21,41 +25,88 @@ class Crud_generator extends CI_Controller {
 
 
 	//ignore the main standard tables
-	public function ignore_main($tables)
+	public function ignore_main($tables,$prefix)
 	{
+		
+		
+
 		$tmp = array();
 
 		foreach ($tables as $field) 
 		{	
-			if($field == "IGS_email")
+			if($field == "$prefix"."email")
 			{
 				//do nothing
 			}
-			else if($field == "IGS_permission_groups")
+			else if($field == "$prefix"."permission_groups")
 			{
 				//do nothing
 			}
-			else if($field == "IGS_permission_map")
+			else if($field == "$prefix"."permission_map")
 			{
 				//do nothing 
 			}
-			else if($field == "IGS_permissions")
+			else if($field == "$prefix"."permissions")
 			{
 				//do nothing				
 			}
-			else if($field == "IGS_routes")
+			else if($field == "$prefix"."routes")
 			{
 				//do nothing				
 			}
-			else if($field == "IGS_site")
+			else if($field == "$prefix"."site")
 			{
 				//do nothing				
 			}
-			else if($field == "IGS_user")
+			else if($field == "$prefix"."user")
 			{
 				//do nothing				
 			}
-			else if($field == "IGS_uploads")
+			else if($field == "$prefix"."uploads")
+			{
+				//do nothing				
+			}
+			else if($field == "$prefix"."assetfields")
+			{
+				//do nothing				
+			}
+			else if($field == "$prefix"."blocks")
+			{
+				//do nothing				
+			}
+			else if($field == "$prefix"."cat_links")
+			{
+				//do nothing				
+			}
+			else if($field == "$prefix"."cats")
+			{
+				//do nothing				
+			}
+			else if($field == "$prefix"."content")
+			{
+				//do nothing				
+			}
+			else if($field == "$prefix"."entry")
+			{
+				//do nothing				
+			}
+			else if($field == "$prefix"."fields")
+			{
+				//do nothing				
+			}
+			else if($field == "$prefix"."menu")
+			{
+				//do nothing				
+			}
+			else if($field == "$prefix"."menu2")
+			{
+				//do nothing				
+			}
+			else if($field == "$prefix"."section")
+			{
+				//do nothing				
+			}
+			else if($field == "$prefix"."section_layout")
 			{
 				//do nothing				
 			}
@@ -69,6 +120,19 @@ class Crud_generator extends CI_Controller {
 	}
 
 
+	 /**
+	  *  @Description: custom function to check if _POST name starts with chk
+	  *       @Params: string, startwith string
+	  *
+	  *  	 @returns: true or false
+	  */
+	public function startsWith($haystack, $needle)
+	{
+	     $length = strlen($needle);
+	     return (substr($haystack, 0, $length) === $needle);
+	}
+
+
 	public function get_fields()
 	{
 		$table = $this->input->post('name');
@@ -77,10 +141,12 @@ class Crud_generator extends CI_Controller {
 		//generate the code
 
 		//IMPORTANT must assume the table name only has one underscore
-		//Reconsider coding too many bugs
+		//More robust table splitter
 
+		$this->load->database();
+		$pref =  $this->db->dbprefix;
 
-		$arr = explode("_", $table);
+		$arr = explode($pref, $table);
 
 		
 		$this->gen_logic($table);
@@ -116,7 +182,10 @@ class Crud_generator extends CI_Controller {
 			
 		}
 
-		$arr = explode("_", $table);
+		$this->load->database();
+		$pref =  $this->db->dbprefix;
+
+		$arr = explode($pref, $table);
 
 
 		$this->tt($arr[1],$form_array);

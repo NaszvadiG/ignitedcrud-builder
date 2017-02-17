@@ -48,6 +48,7 @@
   		        <div class="panel-body" style="padding:30px; ">
   		        	<h3 class="purplet text-bold">What Ignitedcrud Builder?</h3>
   		        	An automated crud builder for codeigniter <br/> <br/>
+                    Additional documentation to come.
 
   		        	 	
   		        	

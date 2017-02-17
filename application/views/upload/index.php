@@ -1,4 +1,21 @@
 <div class="pmf-container" style="margin-left:auto; margin-right:auto; margin-top:30px; min-height:800px;  ">
+
+     <!-- breadcrumb -->
+    <div class="row" style="margin-left:30px; margin-right:30px;">
+        <div class="col-sm-12">
+            <!-- .breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a href="<?php echo site_url('admin/dashboard'); ?>"><i class="fa fa-home"></i> Dashboard </a>
+                </li>
+                <li class='active'><a href="<?php echo site_url('admin/upload_test'); ?>"><i class="fa fa-list-ul"></i> <?php echo ('Upload test'); ?></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- end breadcrumb -->
+
+
+
     <div class="row" style="margin-left:30px; margin-right:30px;">
         <div class="col-sm-12">
             <header class="panel-heading font-bold">Quick upload test

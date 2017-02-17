@@ -93,6 +93,20 @@
             cursor: pointer;
         }
 
+         .paginate_enabled_next{
+            margin-top: 5px;
+            margin-left: 5px;
+            padding: 5px;
+            color: #ffffff;
+            border-radius: 2px;
+            background-color: #289df2;
+            border:  1px solid;
+            border-color: rgb(13, 116, 185);
+            font-weight: bold;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
 
         /*overwrite table headers*/
 
@@ -619,6 +633,11 @@
         /*for the login button on menu*/
         a.stop:hover {
             background-color: rgb(1, 138, 223);
+        }
+
+        a:hover {
+            
+            /*text-decoration: underline;*/
         }
 
 

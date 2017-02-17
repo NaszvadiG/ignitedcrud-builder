@@ -122,6 +122,12 @@
             cursor: pointer;
         }
 
+        .dataTables_length {
+            padding: 5px;
+            max-width: 200px;
+            float: left;
+        }
+
 
         /*overwrite table headers*/
 

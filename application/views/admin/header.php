@@ -171,7 +171,7 @@
 
         /*overright form control text size*/
         .form-control{
-            font-size: 16px;
+            /*font-size: 16px;*/
         }
 
 
@@ -522,7 +522,7 @@
             /* Fix for webkit rendering */
         }
 
-        .panel
+        /*.panel
         {
             -webkit-box-shadow: 4px 34px 74px -42px rgba(102,102,107,0.54);
             -moz-box-shadow: 4px 34px 74px -42px rgba(102,102,107,0.54);
@@ -536,20 +536,18 @@
             border-left: 1px solid #cacaca;
             border-right:1px solid #cacaca;
             
-        }
+        }*/
         
 
         .shorttag {
             /*display:none;*/
         }
         .pm-footer {
-            background-color: #fff;
-            min-height: 400px;
+            background-color: #363636;
             bottom: 0px;
         }
         .footer-brand {
-            color: #666;
-
+            color: #fff;
         }
         .phone-number-bar {
             position: relative;
@@ -601,25 +599,18 @@
             font-size: 18px;
             font-weight: bold;
         }
-        .head-outer {
+       .head-outer {
             position: relative;
-            background-color: #fff;
+            background-color: #363636;
             /*box-shadow: 0 4px 4px rgba(0, 0, 0, .11);*/
             min-height: 90px;
             z-index: 999;
-
-            -webkit-box-shadow: 4px 6px 11px -2px rgba(136,157,189,1);
-            -moz-box-shadow: 4px 6px 11px -2px rgba(136,157,189,1);
-            box-shadow: 4px 6px 11px -2px rgba(136,157,189,1);
-
-
-
         }
         .head {
             height: 80px;
-            background-color: #fff;
-            color: #333;
-            max-width: 180px;
+            background-color: #363636;
+            color: #fff;
+            min-width: 205px;
         }
         a {
             color: #2895F1;

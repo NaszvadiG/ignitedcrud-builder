@@ -79,6 +79,21 @@
 
         }
 
+         .paginate_enabled_previous{
+
+            margin-top: 5px;
+            padding: 5px;
+            color: #ffffff;
+            border-radius: 2px;
+            background-color: #289df2;
+            border:  1px solid;
+            border-color: rgb(13, 116, 185);
+            font-weight: bold;
+            font-size: 12px;
+            cursor: pointer;
+
+        }
+
         .paginate_disabled_next{
             margin-top: 5px;
             margin-left: 5px;

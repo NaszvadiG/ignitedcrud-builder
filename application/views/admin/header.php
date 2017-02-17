@@ -110,7 +110,7 @@
 
         /*overwrite table headers*/
 
-        .table > tbody + 
+       /* .table > tbody + 
         tbody {
              border-top: 0px solid #ddd; 
         }
@@ -135,7 +135,7 @@
             background: linear-gradient(#fff, #f4faff);
           border-right: 1px solid #ddd;
           color: #999;
-        }
+        }*/
 
 
 
@@ -175,13 +175,13 @@
         }
 
 
-        /*overwrite table styles*/
+        /*overwrite table styles
         .text-sm{
             font-size: 14px;
             font-weight: bold;
             color: #666;
 
-        }
+        }*/
 
         /*overright form control text size*/
         .form-control{

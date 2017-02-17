@@ -676,20 +676,7 @@
             background-color: rgb(1, 138, 223);
             color:#ffffff;
         }
-        /*
-        .Rounded_Rectangle_1 {
-          border-width: 1px;
-          border-color: rgb(13, 116, 185);
-          border-style: solid;
-          border-radius: 2px;
-          background-color: rgb(1, 138, 223);
-          position: absolute;
-          left: 216px;
-          top: 39px;
-          width: 136px;
-          height: 34px;
-          z-index: 4;
-        }*/
+        
 
 
         /*style the tabs as white*/

@@ -72,15 +72,15 @@
     });
 
 
-   $('#example').DataTable();
+    // $('#example').DataTable();
 
+   $('#example').dataTable( {
+      "aoColumnDefs": [
+          { 'bSortable': false, 'aTargets': [ 0 ] }
+       ]
+});
 
-    /*do the gallery
-    $(function() 
-    {
-      $('.gallery a').lightbox(); 
-    });
-    */
+   
 
 
 

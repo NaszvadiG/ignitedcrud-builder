@@ -11,15 +11,7 @@
 
                      <div class="row">
                         <div class="col-sm-10">
-                             <div class="btn  btn-white" data-toggle="popover" data-html="true" data-placement="top" data-content='
-                               Are you sure? You can not can not get this back if you click yes!<br/><br/>
-                               
-                              <button type="submit" class="btn btn-purplet btn-block" name="sbm" value="delete" ><strong>Yes</strong></button>
-                              
-
-                              ' title="" data-original-title='<button type="button" class="close pull-right" data-dismiss="popover">&times;</button>Warning!!!'>  
-                                <strong>Delete Selected</strong> 
-                              </div>
+                             
                           
                         </div>
                         <div class="col-sm-2">
@@ -36,14 +28,14 @@
                             <thead>
 
                                 <tr>
-                                    <th width="20" ><input type="checkbox"></th>
+                                    
                                     {{header}}
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($query->result() as $key): ?>
                                 <tr>
-                                    <td><input type="checkbox" name="chosen[]" value="<?php echo $key->id; ?>"></td>
+                                   
                                     {{table_content}}
                                     <td>
                                         <?php echo anchor( "admin/{{table}}/edit_{{table}}_view/$key->id", 'Edit'); ?>

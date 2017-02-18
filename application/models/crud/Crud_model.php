@@ -379,14 +379,14 @@ class Crud_model extends CI_Model {
 			}
 			else
 			{
-				$arg_string = $arg_string . "<th class=\"text-muted\" width=\"\">$key->name</th>" ."\n";
+				$arg_string = $arg_string . "<th class=\"\" width=\"\">$key->name</th>" ."\n";
 			}
 			
 			
 		}
 
 		//important get rid of the last trailing comma
-		$arg_string = $arg_string . "<th class=\"text-muted\" width=\"\">Action</th>";
+		$arg_string = $arg_string . "<th class=\"\" width=\"\">Action</th>";
 		return $arg_string;
 
 

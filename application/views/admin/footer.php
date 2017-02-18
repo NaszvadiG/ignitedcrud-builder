@@ -75,10 +75,8 @@
     // $('#example').DataTable();
 
    $('#example').dataTable( {
-      "aoColumnDefs": [
-          { 'bSortable': false, 'aTargets': [ 0 ] }
-       ]
-});
+      
+    });
 
    
 

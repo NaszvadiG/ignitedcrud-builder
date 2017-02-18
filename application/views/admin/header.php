@@ -131,7 +131,7 @@
 
         /*overwrite table headers*/
 
-       /* .table > tbody + 
+        .table > tbody + 
         tbody {
              border-top: 0px solid #ddd; 
         }
@@ -156,7 +156,7 @@
             background: linear-gradient(#fff, #f4faff);
           border-right: 1px solid #ddd;
           color: #999;
-        }*/
+        }
 
 
 
@@ -196,13 +196,8 @@
         }
 
 
-        /*overwrite table styles
-        .text-sm{
-            font-size: 14px;
-            font-weight: bold;
-            color: #666;
-
-        }*/
+        
+        
 
         /*overright form control text size*/
         .form-control{
@@ -557,7 +552,7 @@
             /* Fix for webkit rendering */
         }
 
-        /*.panel
+        .panel
         {
             -webkit-box-shadow: 4px 34px 74px -42px rgba(102,102,107,0.54);
             -moz-box-shadow: 4px 34px 74px -42px rgba(102,102,107,0.54);
@@ -571,7 +566,7 @@
             border-left: 1px solid #cacaca;
             border-right:1px solid #cacaca;
             
-        }*/
+        }
         
 
         .shorttag {

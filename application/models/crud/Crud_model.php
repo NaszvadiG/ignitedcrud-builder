@@ -15,7 +15,7 @@ class Crud_model extends CI_Model {
 	 {
 
 	 	//first create a directory with the name of the table
-   		$view_path  = APPPATH . "/views/$table";
+   		$view_path  = APPPATH . "/views/admin/$table";
    		mkdir($view_path);
 
 	 	//////////////////////////////////////////index file
@@ -29,7 +29,7 @@ class Crud_model extends CI_Model {
    		$gen_con = $this->gen_table_content($table);
    		$string = str_replace("{{table_content}}", $gen_con, $string);
 
-   		if ( ! write_file(APPPATH . "/views/$table/index.php", $string))
+   		if ( ! write_file(APPPATH . "/views/admin/$table/index.php", $string))
 		{
 		    echo 'Unable to write the file, check you have right permissions';
 		}
@@ -46,7 +46,7 @@ class Crud_model extends CI_Model {
 		$string = str_replace("{{fields}}", $gen_fields, $string);
 
 
-		if ( ! write_file(APPPATH . "/views/$table/new.php", $string))
+		if ( ! write_file(APPPATH . "/views/admin/$table/new.php", $string))
 		{
 		    echo 'Unable to write the file, check you have right permissions';
 		}
@@ -64,7 +64,7 @@ class Crud_model extends CI_Model {
 		$string = str_replace("{{fields}}", $gen_fields2, $string);
 
 
-		if ( ! write_file(APPPATH . "/views/$table/edit.php", $string))
+		if ( ! write_file(APPPATH . "/views/admin/$table/edit.php", $string))
 		{
 		    echo 'Unable to write the file, check you have right permissions';
 		}
@@ -81,7 +81,7 @@ class Crud_model extends CI_Model {
    		
    		$string = str_replace("{{table}}", $table, $string);
 
-   		if ( ! write_file(APPPATH . "/views/$table/breadcrumb-all.php", $string))
+   		if ( ! write_file(APPPATH . "/views/admin/$table/breadcrumb-all.php", $string))
 		{
 		    echo 'Unable to write the file, check you have right permissions';
 		}
@@ -95,7 +95,7 @@ class Crud_model extends CI_Model {
    		
    		$string = str_replace("{{table}}", $table, $string);
 
-   		if ( ! write_file(APPPATH . "/views/$table/breadcrumb-edit.php", $string))
+   		if ( ! write_file(APPPATH . "/views/admin/$table/breadcrumb-edit.php", $string))
 		{
 		    echo 'Unable to write the file, check you have right permissions';
 		}
@@ -109,7 +109,7 @@ class Crud_model extends CI_Model {
    		
    		$string = str_replace("{{table}}", $table, $string);
 
-   		if ( ! write_file(APPPATH . "/views/$table/breadcrumb-new.php", $string))
+   		if ( ! write_file(APPPATH . "/views/admin/$table/breadcrumb-new.php", $string))
 		{
 		    echo 'Unable to write the file, check you have right permissions';
 		}

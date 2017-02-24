@@ -37,7 +37,7 @@ class Crud_export extends CI_Model {
         $gen_con = $this->gen_table_content($table);
         $string = str_replace("{{table_content}}", $gen_con, $string);
 
-        if ( ! write_file("crud_files/$table/views/index.php", $string))
+        if ( ! write_file("crud_files/$table/views/$table/index.php", $string))
         {
             echo 'Unable to write the file, check you have right permissions';
         }

@@ -4,25 +4,23 @@
   <section class="vbox">
    
 
-  <div class="head-outer">
+ <div class="head-outer">
       
 
       <div class="head" id="tidy">
-        
-        
+        <div class="logo visible-lg visible-md">
+       
+        </div>
 
-        <!-- <div class="logo-text">Mark Bates Limited</div> -->
-        <div class="menu-options pull-right" style="margin-top:35px;">
-          <div class="purplet" data-toggle="popover" data-html="true" data-placement="bottom" 
-          data-content='<?php echo anchor('admin/help', 'Help', 'attributs'); ?>
+        <div class="logo-text">Ignited Crud Builder</div>
+        <div class="menu-options pull-right" style="margin-top:20px;">
+          <div class="btn btn-sm  btn-black" data-toggle="popover" data-html="true" data-placement="bottom" 
+          data-content='<?php echo anchor('admin/profile','My Profile','attributs'); ?>
           <br/>
-          
           <?php echo anchor('admin/login/logout', 'Logout', 'attributs'); ?>
-          <br/>
-          
           
 
-          ' title="" data-original-title='<button type="button" class="close pull-right" data-dismiss="popover">&times;</button>Info'> <img src="<?php echo base_url("img/faceholder-24-vflpqFBTK.png"); ?>"  alt="">   <?php echo ucfirst(my_username()); ?></div>
+          ' title="" data-original-title='<button type="button" class="close pull-right" data-dismiss="popover">&times;</button>Profile'> <i class="fa fa-user"></i>  <strong> <?php echo my_username(); ?></strong></div>
 
           
 

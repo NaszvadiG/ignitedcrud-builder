@@ -243,6 +243,9 @@ class Crud_generator extends CI_Controller {
         $this->crud_export->generate_model($table);
        
 
+        //dump the sql file
+        $this->crud_export->get_structure($table);
+
 
         $this->session->set_flashdata('type', '1');
         $this->session->set_flashdata('msg', 'Your controller, models and views have been created as one zip');

@@ -3,6 +3,60 @@
 class Crud_export extends CI_Model {
 
 
+
+     /**
+      *  @Description: get and dump the table structure to a sql file for import
+      *       @Params: params
+      *
+      *       @returns: returns
+      */
+    public function get_structure($table)
+    {
+        $fields = $this->db->field_data($table);
+
+        $string = "DROP TABLE IF EXISTS `$table`; \nCREATE TABLE `$table` (\n `id` int(11) NOT NULL AUTO_INCREMENT,\n";
+        foreach ($fields as $field)
+        {
+            if($field->name == "id")
+            {
+
+                //ignore
+            }
+            else
+            {
+
+                $string = $string . "`$field->name`";
+                $string = $string . " $field->type";
+
+                if (strlen($field->max_length) > 0) 
+                {
+                    $string = $string . "($field->max_length)";
+                }
+
+               
+                $string = $string . " NOT NULL,";
+
+            }
+            
+        }
+
+        $string = $string . "\nPRIMARY KEY(`id`)\n)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;";
+
+        if ( ! write_file("crud_files/$table/test.sql", $string))
+        {
+            echo 'Unable to write the file, check you have right permissions';
+        }
+        else
+        {
+            //echo 'File written!';
+        }
+
+
+    }
+
+
+
+
      /**
       *  @Description: generate all the view files
       *       @Params: table name, form_array giving field name information, type, helper instructions and required status!

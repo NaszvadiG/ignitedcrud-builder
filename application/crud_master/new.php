@@ -21,7 +21,7 @@
     </div>
 
 
-    <?php $this->load->view('{{table}}/breadcrumb-new'); ?>
+    <?php $this->load->view('admin/{{table}}/breadcrumb-new'); ?>
     <div class="row" style="margin-left:30px; margin-right:30px;">
         <div class="col-sm-12">
             <header class="panel-heading font-bold">New {{table}}

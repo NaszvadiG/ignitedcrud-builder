@@ -19,7 +19,7 @@
     </div>
 
 
-    <?php $this->load->view('{{table}}/breadcrumb-edit'); ?>
+    <?php $this->load->view('admin/{{table}}/breadcrumb-edit'); ?>
     <div class="row" style="margin-left:30px; margin-right:30px;">
         <div class="col-sm-12">
             <header class="panel-heading font-bold">Edit {{table}}

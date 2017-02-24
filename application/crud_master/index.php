@@ -21,7 +21,7 @@
     </div>
 
 
-    <?php $this->load->view('{{table}}/breadcrumb-all'); ?>
+    <?php $this->load->view('admin/{{table}}/breadcrumb-all'); ?>
     <div class="row" style="margin-left:30px; margin-right:30px;">
         <div class="col-sm-12">
             <header class="panel-heading font-bold">All {{table}}

@@ -13,7 +13,7 @@ class {{table_upper}} extends CI_Controller {
 
 		$this->load->view('admin/header');
         $this->load->view('admin/body');
-        $this->load->view('{{table}}/index',$data);
+        $this->load->view('admin/{{table}}/index',$data);
         $this->load->view('admin/footer');
 	}
 
@@ -29,7 +29,7 @@ class {{table_upper}} extends CI_Controller {
 	{
 		$this->load->view('admin/header');
         $this->load->view('admin/body');
-        $this->load->view('{{table}}/new');
+        $this->load->view('admin/{{table}}/new');
         $this->load->view('admin/footer');
 
 
@@ -61,7 +61,7 @@ class {{table_upper}} extends CI_Controller {
 
 			$this->load->view('admin/header');
 	        $this->load->view('admin/body');
-	        $this->load->view('{{table}}/new');
+	        $this->load->view('admin/{{table}}/new');
 	        $this->load->view('admin/footer');
 			
 		}
@@ -116,7 +116,7 @@ class {{table_upper}} extends CI_Controller {
 
 		$this->load->view('admin/header');
         $this->load->view('admin/body');
-        $this->load->view("{{table}}/edit",$data);
+        $this->load->view("admin/{{table}}/edit",$data);
         $this->load->view('admin/footer');
 
 	}
@@ -149,7 +149,7 @@ class {{table_upper}} extends CI_Controller {
 
 			$this->load->view('admin/header');
 	        $this->load->view('admin/body');
-	        $this->load->view('{{table}}/new');
+	        $this->load->view('admin/{{table}}/new');
 	        $this->load->view('admin/footer');
 			
 		}

@@ -247,6 +247,14 @@ class Crud_generator extends CI_Controller {
         $this->session->set_flashdata('type', '1');
         $this->session->set_flashdata('msg', 'Your controller, models and views have been created as one zip');
 
+
+        //now test zipping this folder
+        $this->load->library('zip');
+        $this->zip->read_dir("crud_files/$table",false);
+        $this->zip->archive("$table.zip"); 
+        $this->zip->download("$table.zip");
+
+
         redirect("admin/dashboard","refresh");
     }
 

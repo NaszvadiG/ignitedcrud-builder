@@ -149,10 +149,8 @@ class Crud_generator extends CI_Controller {
 		$arr = explode($pref, $table);
 
 		
-		$this->gen_logic($table);
-
-		//for the writing files
-		//$this->tt($arr[1]);
+        
+        $this->gen_logic($table);
 
 
 	}
@@ -188,8 +186,18 @@ class Crud_generator extends CI_Controller {
 		$arr = explode($pref, $table);
 
 
-		$this->tt($arr[1],$form_array);
+        //The choice option
+        $choice = $this->input->post('choice');
 
+        if ($choice == 'inside') 
+        {
+            $this->tt($arr[1],$form_array);
+        }
+        else
+        {
+
+            $this->ff($arr[1],$form_array);
+        }
 
 
 
@@ -223,6 +231,24 @@ class Crud_generator extends CI_Controller {
         $this->load->view('admin/footer');
 
 	}
+
+
+    //dump to one folder as zip
+    public function ff($table,$form_array)
+    {
+
+        $this->load->model('crud/crud_export');
+        $this->crud_export->generate_view($table,$form_array);
+        $this->crud_export->generate_controller($table,$form_array);
+        $this->crud_export->generate_model($table);
+       
+
+
+        $this->session->set_flashdata('type', '1');
+        $this->session->set_flashdata('msg', 'Your controller, models and views have been created as one zip');
+
+        redirect("admin/$table","refresh");
+    }
 
 
 	public function tt($table,$form_array)

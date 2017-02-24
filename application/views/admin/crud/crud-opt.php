@@ -48,6 +48,13 @@
                             <br/> </div>
                         <?php endif; ?>
                         <?php endforeach; ?>
+
+
+                        <div class="form-group m-t">
+                           <label><input type="radio" name="choice" value="inside" /> Create inside</label> <br/>
+                           <label><input type="radio" name="choice" value="dump" /> Dump to zip</label>
+                        </div>
+
                         <button type="submit" class="btn btn-purplet btn-s-xs pull-right m-t" id=""> <i class="fa fa-check"></i> <strong>Save and process information</strong> </button>
                     </form>
                 </div>

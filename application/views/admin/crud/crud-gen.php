@@ -30,6 +30,7 @@
 
                         </div>
 
+                        
 
                         <div class="form-group">
                             <label>Please select a table to apply the crud generator on</label>
@@ -42,6 +43,8 @@
                                 </option>
                                 <?php endforeach; ?> </select>
                         </div>
+
+                        
                         <button type="submit" class="btn btn-purplet btn-s-xs pull-right m-t" id=""> <i class="fa fa-check"></i> <strong>Select</strong> </button>
                     </form>
                 </div>

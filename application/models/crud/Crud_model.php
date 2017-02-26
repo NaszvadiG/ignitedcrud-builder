@@ -439,7 +439,7 @@ class Crud_model extends CI_Model {
 
 
 	   //read the master controller file
-   		$string = read_file(APPPATH .'/crud_master/master_controller.txt');
+   		$string = read_file(APPPATH .'/crud_master/master_controller2.txt');
 
    		//do a string replace on table
    		$string = str_replace("{{table}}", $table, $string);

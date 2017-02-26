@@ -49,22 +49,7 @@
     $(document).ready(function (event) 
     {
 
-      // this needs to be dynamically generated
-
-      <?php if($this->session->flashdata('msg')) {?>
-                  
-          <?php if($this->session->flashdata('type') =='0') { ?>
-              
-              $.growl.error({ message: "<?php echo $this->session->flashdata('msg');?>" });
-          
-          <?php } ?>
-
-          <?php if($this->session->flashdata('type') =='1') { ?>
-              
-              $.growl.notice({ message: "<?php echo $this->session->flashdata('msg');?>" });
-          
-          <?php } ?>
-      <?php } ?>
+      
 
 
           
